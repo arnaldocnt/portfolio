@@ -1,11 +1,13 @@
-import React from 'react'
-import Projetos from "./components/Projetos"
+
+import NavBar from "./components/NavBar/NavBar.jsx"
+import "./global.scss"
+
 
 function App() {
   return (
     <>
-    <h1>Portfolio</h1>
-    <Projetos/>
+      <h1>Portfolio</h1>
+      <NavBar />
     </>
   )
 }

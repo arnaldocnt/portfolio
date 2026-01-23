@@ -1,9 +1,8 @@
-import React from 'react'
 import { useState } from 'react'
 
-import PetAdopt from "../assets/petadopt.jpeg"
-import ReciclaTech from "../assets/reciclatech.jpeg"
-import VerdeAcao from "../assets/verdeacao.jpeg"
+import PetAdopt from "../../assets/petadopt.jpeg"
+import ReciclaTech from "../../assets/reciclatech.jpeg"
+import VerdeAcao from "../../assets/verdeacao.jpeg"
 
 function Projetos() {
 
