@@ -12,7 +12,7 @@ function Projetos() {
       imagem: PetAdopt,
       nome: "PetAdopt",
       descricao: "Projeto criado para adoção de pets.",
-      site: "verde-acao-kappa.vercel.app"
+      site: "https://verde-acao-kappa.vercel.app"
     },
 
     {
@@ -44,13 +44,12 @@ function Projetos() {
           <div key={item.id} >
             <h2> {item.nome} </h2>
             <p> {item.descricao} </p>
-            <a
-              href={item.site}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visitar projeto
-            </a>
+            <iframe
+              src={item.site}
+              title={item.nome}
+              style={{ width: "100%", height: "100vh", border: "none" }}
+            />
+
 
           </div>
 
