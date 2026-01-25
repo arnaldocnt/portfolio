@@ -11,22 +11,24 @@ function Projetos() {
       id: 1,
       imagem: PetAdopt,
       nome: "PetAdopt",
-      descricao: "Projeto criado para adoção de pets."
-      //link:
+      descricao: "Projeto criado para adoção de pets.",
+      site: "verde-acao-kappa.vercel.app"
     },
 
     {
       id: 2,
       imagem: ReciclaTech,
       nome: "ReciclaTech",
-      descricao: "Projeto para desapego de produtos de tecnologia."
+      descricao: "Projeto para desapego de produtos de tecnologia.",
+      site: "google.com"
     },
 
     {
       id: 3,
       imagem: VerdeAcao,
       nome: "VerdeAção",
-      descricao: "Projeto para conectar interessados em ações voluntárias."
+      descricao: "Projeto para conectar interessados em ações voluntárias.",
+      site: "msn.com"
     }
 
   ]);
@@ -40,9 +42,16 @@ function Projetos() {
         {projetos.map((item) => (
 
           <div key={item.id} >
-            <img src={item.imagem} alt="" />
             <h2> {item.nome} </h2>
             <p> {item.descricao} </p>
+            <a
+              href={item.site}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visitar projeto
+            </a>
+
           </div>
 
         ))}
