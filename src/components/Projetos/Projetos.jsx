@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import styles from "./Projetos.module.scss"
+
 import PetAdopt from "../../assets/petadopt.jpeg"
 import ReciclaTech from "../../assets/reciclatech.jpeg"
 import VerdeAcao from "../../assets/verdeacao.jpeg"
@@ -9,10 +11,11 @@ function Projetos() {
   const [projetos, setProjetos] = useState([
     {
       id: 1,
-      imagem: PetAdopt,
-      nome: "PetAdopt",
-      descricao: "Projeto criado para adoção de pets.",
-      site: "https://verde-acao-kappa.vercel.app"
+      imagem: VerdeAcao,
+      nome: "Verde Ação",
+      descricao: "Projeto para conectar interessados em ações voluntárias.",
+      link: "https://verde-acao-kappa.vercel.app/",
+      habilidades: "<React/>, .SCSS{}"
     },
 
     {
@@ -20,15 +23,17 @@ function Projetos() {
       imagem: ReciclaTech,
       nome: "ReciclaTech",
       descricao: "Projeto para desapego de produtos de tecnologia.",
-      site: "google.com"
+      link: "https://google.com",
+      habilidades: "<React/>, .SCSS{}"
     },
 
     {
       id: 3,
-      imagem: VerdeAcao,
-      nome: "VerdeAção",
-      descricao: "Projeto para conectar interessados em ações voluntárias.",
-      site: "msn.com"
+      imagem: PetAdopt,
+      nome: "Pet Adopt",
+      descricao: "Projeto voltado a para adoção de animais.",
+      link: "https://msn.com ",
+      habilidades: "<React/>, .SCSS{}"
     }
 
   ]);
@@ -38,20 +43,20 @@ function Projetos() {
     <>
       <article>
 
-
         {projetos.map((item) => (
 
-          <div key={item.id} >
-            <h2> {item.nome} </h2>
-            <p> {item.descricao} </p>
-            <iframe
-              src={item.site}
-              title={item.nome}
-              style={{ width: "100%", height: "100vh", border: "none" }}
-            />
+          <section className={styles.card} key={item.id} >
+
+            
+              <img src={item.imagem} alt="" />
+              <p> {item.nome} </p>
+              <h2> {item.descricao} </h2>
+              <h3> {item.habilidades}</h3>
+              <button onClick={() => window.open(item.link, "_blank")}>Ver</button>
 
 
-          </div>
+
+          </section>
 
         ))}
 

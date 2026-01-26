@@ -1,0 +1,30 @@
+article {
+    border: solid red;
+    display: flex;
+    background-color: #282C33;
+
+
+    justify-content: space-around;
+    flex-direction: row;
+
+    align-items: center;
+
+    height: 65vh;
+}
+
+.card {
+
+    border: solid blue;
+
+    button {
+        width: 18vw;
+        height: 18vh;
+        border: none;
+        cursor: pointer;
+
+
+        img {
+            width: 100%;
+        }
+    }
+}
