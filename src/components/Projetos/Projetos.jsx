@@ -13,7 +13,7 @@ function Projetos() {
       id: 1,
       imagem: VerdeAcao,
       nome: "Verde Ação",
-      descricao: "Projeto para conectar interessados em ações voluntárias.",
+      descricao: "Projeto para ações voluntárias.",
       link: "https://verde-acao-kappa.vercel.app/",
       habilidades: "<React/>, .SCSS{}"
     },
@@ -22,7 +22,7 @@ function Projetos() {
       id: 2,
       imagem: ReciclaTech,
       nome: "ReciclaTech",
-      descricao: "Projeto para desapego de produtos de tecnologia.",
+      descricao: "Projeto para desapego de produtos.",
       link: "https://google.com",
       habilidades: "<React/>, .SCSS{}"
     },
@@ -31,40 +31,42 @@ function Projetos() {
       id: 3,
       imagem: PetAdopt,
       nome: "Pet Adopt",
-      descricao: "Projeto voltado a para adoção de animais.",
+      descricao: "Projeto voltado à adoção de animais.",
       link: "https://msn.com ",
       habilidades: "<React/>, .SCSS{}"
     }
+
+    // {
+    //   id: 4,
+    //   Imagem: RockFood,
+    //   nome: "Rock Food",
+    //   descricao: "Projeto para lanchonetes",
+    //   link: "",
+    //   habilidades: "<React/>, .SCSS{}"
+    // }
 
   ]);
 
 
   return (
     <>
+
       <article>
-
         {projetos.map((item) => (
+          <div className={styles.card} key={item.id}>
+            <img src={item.imagem} alt="Logo" />
+            <h2> {item.nome} </h2>
+            <p> {item.descricao} </p>
+            <button onClick={() => window.open(item.link, "_blank")}>
+              Ver Projeto
+            </button>
 
-          <section className={styles.card} key={item.id} >
-
-            
-              <img src={item.imagem} alt="" />
-              <p> {item.nome} </p>
-              <h2> {item.descricao} </h2>
-              <h3> {item.habilidades}</h3>
-              <button onClick={() => window.open(item.link, "_blank")}>Ver</button>
-
-
-
-          </section>
-
+          </div>
         ))}
-
-
-
       </article>
     </>
-  )
+  );
 }
+
 
 export default Projetos
