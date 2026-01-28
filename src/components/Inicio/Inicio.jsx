@@ -1,17 +1,21 @@
 import React from 'react'
 
 import styles from "./Inicio.module.scss"
+import Apresentacao from './Apresentacao'
 
-export default function Inicio() {
+function Inicio() {
 
 
   return (
     <>
     <section>
 
-      <h2>Este é o Inicio</h2>
+      <Apresentacao/>
 
     </section>
     </>
   )
 }
+
+
+export default Inicio
