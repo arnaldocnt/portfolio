@@ -50,17 +50,15 @@ function Projetos() {
 
   return (
     <>
-
-      <article>
+      <article className={styles.card}>
         {projetos.map((item) => (
-          <div className={styles.card} key={item.id}>
-            <img src={item.imagem} alt="Logo" />
-            <h2> {item.nome} </h2>
-            <p> {item.descricao} </p>
+          <div key={item.id}>
+            <img src={item.imagem} alt={item.nome} />
+            <h2>{item.nome}</h2>
+            <p>{item.descricao}</p>
             <button onClick={() => window.open(item.link, "_blank")}>
               Ver Projeto
             </button>
-
           </div>
         ))}
       </article>

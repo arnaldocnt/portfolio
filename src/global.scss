@@ -10,4 +10,14 @@
 
     font-family: "JetBrains mono", monospace;
     font-weight: 200;
+
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+
+    *{
+        scroll-behavior: smooth;
+    }
+    
 }

@@ -12,7 +12,7 @@ function Contatos() {
 
         <div>
           <h2>Contatos</h2>
-          <h3>Vamos transformar projetos em realidade?</h3>
+          <h2>Vamos transformar projetos em realidade?</h2>
           <p>Entre em contato comigo</p>
         </div>
         
